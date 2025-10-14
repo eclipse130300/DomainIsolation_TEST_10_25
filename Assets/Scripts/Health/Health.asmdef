@@ -1,7 +1,9 @@
 {
     "name": "Health",
     "rootNamespace": "",
-    "references": [],
+    "references": [
+        "GUID:8fb030949ab3ed2448da6ec532115767"
+    ],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,

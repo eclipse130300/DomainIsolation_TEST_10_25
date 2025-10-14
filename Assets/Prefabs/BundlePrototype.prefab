@@ -148,8 +148,9 @@ GameObject:
   - component: {fileID: 6388405639538162701}
   - component: {fileID: 2809013241820997159}
   - component: {fileID: 4126053436815624908}
+  - component: {fileID: 8254690357443331051}
   m_Layer: 5
-  m_Name: Button
+  m_Name: ButtonInfo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -257,6 +258,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &8254690357443331051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1186996735904648521}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 92abfc544e9621447af4ddd67960a78d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Shop::OpenBundleInfoButton
+  sceneName: BundleInfoScene
+  button: {fileID: 4126053436815624908}
+  prototype: {fileID: 4953433922823945134}
 --- !u!1 &1611307225062729240
 GameObject:
   m_ObjectHideFlags: 0
@@ -269,6 +285,7 @@ GameObject:
   - component: {fileID: 2639082419479353175}
   - component: {fileID: 910276665991912397}
   - component: {fileID: 5816902464711314839}
+  - component: {fileID: 4953433922823945134}
   m_Layer: 5
   m_Name: BundlePrototype
   m_TagString: Untagged
@@ -356,6 +373,19 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &4953433922823945134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1611307225062729240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c36651a11380438eab84566c20bbe083, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Shop::Shop.BundlePrototype
+  _infoButton: {fileID: 4126053436815624908}
 --- !u!1 &4925211952516618620
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,7 +399,7 @@ GameObject:
   - component: {fileID: 2845377999408834570}
   - component: {fileID: 4431130861618054786}
   m_Layer: 5
-  m_Name: Button (1)
+  m_Name: ButtonBuy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace Shop
+namespace Core
 {
     public class CloseAdditiveSceneOnClick : MonoBehaviour
     {

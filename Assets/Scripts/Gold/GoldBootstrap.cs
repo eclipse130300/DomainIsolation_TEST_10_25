@@ -12,7 +12,7 @@ namespace Gold
             // Initialize player gold with a default value, e.g., 100
             PlayerGold playerGold = new PlayerGold(100);
             
-            Debug.Log($"{nameof(GoldBootstrap)}: Initializing player gold with 100.");
+            Debug.Log($"{nameof(GoldBootstrap)}: Initializing player gold with {playerGold.GoldAmount.Value}.");
         }
     }
 }

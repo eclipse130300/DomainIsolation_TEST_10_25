@@ -13,7 +13,7 @@ namespace Health
             var health = new PlayerHealth(100);
             PlayerData.Instance.Set(health);
             
-            Debug.Log($"{nameof(HealthBootstrap)}: Initializing player health with {health.Health}.");
+            Debug.Log($"{nameof(HealthBootstrap)}: Initializing player health with {health.Health.Value}.");
         }
     }
 }

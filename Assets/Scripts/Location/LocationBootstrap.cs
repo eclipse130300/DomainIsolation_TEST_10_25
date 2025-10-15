@@ -12,7 +12,7 @@ namespace Location
             var location = new PlayerLocation("StartLocation");
             Core.PlayerData.Instance.Set(location);
             
-            Debug.Log($"{nameof(LocationBootstrap)}: Initializing player location to 'StartLocation'.");
+            Debug.Log($"{nameof(LocationBootstrap)}: Initializing player location to {location.Location.Value}.");
         }
     }
 }

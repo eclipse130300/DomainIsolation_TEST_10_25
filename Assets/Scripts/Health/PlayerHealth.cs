@@ -1,12 +1,14 @@
+using UniRx;
+
 namespace Health
 {
     public struct PlayerHealth
     {
-        public int Health;
+        public ReactiveProperty<int> Health;
 
         public PlayerHealth(int health)
         {
-            Health = health;
+            Health = new ReactiveProperty<int>(health);
         }
     }
 }

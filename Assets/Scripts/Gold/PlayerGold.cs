@@ -1,12 +1,14 @@
+using UniRx;
+
 namespace Gold
 {
     public struct PlayerGold
     {
-        public int GoldAmount;
+        public ReactiveProperty<int> GoldAmount;
 
         public PlayerGold(int goldAmount)
         {
-            GoldAmount = goldAmount;
+            GoldAmount = new ReactiveProperty<int>(goldAmount);
         }
     }
 }

@@ -13,7 +13,7 @@ namespace VIP
             var vip = new PlayerVIP(System.TimeSpan.FromMinutes(2));
             Core.PlayerData.Instance.Set(vip);
             
-            Debug.Log($"{nameof(VipBootstrap)}: Initializing player VIP with {vip.VipTime.TotalMinutes} minutes.");
+            Debug.Log($"{nameof(VipBootstrap)}: Initializing player VIP with {vip.VipTime.Value.TotalMinutes} minutes.");
         }
     }
 }

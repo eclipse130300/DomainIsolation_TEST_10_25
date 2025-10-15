@@ -1610,6 +1610,70 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4abebbdcde71f834083f1d90b66f4c47, type: 3}
+--- !u!1 &1824910432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1824910434}
+  - component: {fileID: 1824910433}
+  m_Layer: 0
+  m_Name: Bootstrapper
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1824910433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824910432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8e0505e7a0e4e55a9869d8fe6ad11d2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Core::Core.Bootstrap.GameBootstrapper
+  Bootstappables:
+  - rid: 479085065114222656
+  - rid: 479085065114222650
+  - rid: 479085065114222657
+  - rid: 479085065114222658
+  references:
+    version: 2
+    RefIds:
+    - rid: 479085065114222650
+      type: {class: HealthBootstrap, ns: Health, asm: Health}
+      data: 
+    - rid: 479085065114222656
+      type: {class: GoldBootstrap, ns: Gold, asm: Gold}
+      data: 
+    - rid: 479085065114222657
+      type: {class: LocationBootstrap, ns: Location, asm: Location}
+      data: 
+    - rid: 479085065114222658
+      type: {class: VipBootstrap, ns: VIP, asm: VIP}
+      data: 
+--- !u!4 &1824910434
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1824910432}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1937063504
 GameObject:
   m_ObjectHideFlags: 0
@@ -2091,3 +2155,4 @@ SceneRoots:
   - {fileID: 832575519}
   - {fileID: 212821359}
   - {fileID: 383842976}
+  - {fileID: 1824910434}

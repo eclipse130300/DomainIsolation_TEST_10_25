@@ -19,7 +19,7 @@ namespace Core
 
         /// <summary>Optional custom headers.</summary>
         public virtual Dictionary<string, string> Headers { get; } = new();
-        
+
         public virtual async Task<TResponse> SendAsyncMock()
         {
             await Task.Delay(1000); // Simulate network delay
@@ -76,6 +76,4 @@ namespace Core
             }
         }
     }
-
 }
-

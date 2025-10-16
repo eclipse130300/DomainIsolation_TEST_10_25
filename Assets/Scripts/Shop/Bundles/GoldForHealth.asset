@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6e609b71e6e477a88e750be0b49708d, type: 3}
+  m_Name: GoldForHealth
+  m_EditorClassIdentifier: Shop::Shop.Bundles.BundleSO
+  BundleName: "\u0417\u043E\u043B\u043E\u0442\u043E \u0437\u0430 \u0436\u0438\u0437\u043D\u0438"
+  price:
+  - rid: 479085086305157181
+  rewards:
+  - rid: 479085086305157182
+  references:
+    version: 2
+    RefIds:
+    - rid: 479085086305157181
+      type: {class: ChangeHealthAmountBundleBrick, ns: Health, asm: Health}
+      data:
+        _changeHealthAmount: -15
+    - rid: 479085086305157182
+      type: {class: ChangeGoldBundleBrick, ns: Gold, asm: Gold}
+      data:
+        _changeAmount: 30

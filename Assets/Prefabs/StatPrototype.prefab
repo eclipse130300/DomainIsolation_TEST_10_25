@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4792640240968704803}
   - component: {fileID: 4139129099637209273}
   - component: {fileID: 4218623918729206739}
+  - component: {fileID: 2505010187320241247}
   m_Layer: 5
   m_Name: Button
   m_TagString: Untagged
@@ -142,6 +143,28 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &2505010187320241247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3279057466378603979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c764c0bd9dab432694605563aece1214, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Shop::Shop.Debug.AddResourceCheatButton
+  _cheatButton: {fileID: 4139129099637209273}
+  _cheatBundleBrick:
+    rid: 479085086305157183
+  references:
+    version: 2
+    RefIds:
+    - rid: 479085086305157183
+      type: {class: ChangeGoldBundleBrick, ns: Gold, asm: Gold}
+      data:
+        _changeAmount: 100
 --- !u!1 &4581471706204333282
 GameObject:
   m_ObjectHideFlags: 0

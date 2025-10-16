@@ -839,6 +839,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2140256934}
     m_Modifications:
+    - target: {fileID: 2505010187320241247, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+      propertyPath: _cheatBundleBrick
+      value: 479085086305157184
+      objectReference: {fileID: 0}
+    - target: {fileID: 2505010187320241247, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+      propertyPath: 'managedReferences[479085086305157184]'
+      value: Health Health.ChangeHealthAmountBundleBrick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2505010187320241247, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+      propertyPath: managedReferences[479085086305157184]._changeHealthAmount
+      value: 25
+      objectReference: {fileID: 0}
     - target: {fileID: 4581471706204333282, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
       propertyPath: m_Name
       value: StatHealth
@@ -1074,6 +1086,18 @@ PrefabInstance:
       propertyPath: m_text
       value: 'VIP: 100'
       objectReference: {fileID: 0}
+    - target: {fileID: 2505010187320241247, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+      propertyPath: _cheatBundleBrick
+      value: 479085086305157186
+      objectReference: {fileID: 0}
+    - target: {fileID: 2505010187320241247, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+      propertyPath: 'managedReferences[479085086305157186]'
+      value: VIP VIP.ChangeVipStatusDurationBrick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2505010187320241247, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+      propertyPath: managedReferences[479085086305157186]._changeVipDurationSeconds
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4581471706204333282, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
       propertyPath: m_Name
       value: StatVip
@@ -1227,6 +1251,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2140256934}
     m_Modifications:
+    - target: {fileID: 2505010187320241247, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+      propertyPath: _cheatBundleBrick
+      value: 479085086305157185
+      objectReference: {fileID: 0}
+    - target: {fileID: 2505010187320241247, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+      propertyPath: 'managedReferences[479085086305157185]'
+      value: Location Location.ChangeLocationBundleBrick
+      objectReference: {fileID: 0}
+    - target: {fileID: 2505010187320241247, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+      propertyPath: managedReferences[479085086305157185]._newLocationName
+      value: StartLocation
+      objectReference: {fileID: 0}
     - target: {fileID: 4581471706204333282, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
       propertyPath: m_Name
       value: StatLocation
@@ -2133,6 +2169,10 @@ PrefabInstance:
     - target: {fileID: 2366098985702379033, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
       propertyPath: m_text
       value: "\u0417\u043E\u043B\u043E\u0442\u043E: 100"
+      objectReference: {fileID: 0}
+    - target: {fileID: 2505010187320241247, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+      propertyPath: managedReferences[479085086305157183]._changeAmount
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4581471706204333282, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
       propertyPath: m_Name

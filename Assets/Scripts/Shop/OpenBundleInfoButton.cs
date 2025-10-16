@@ -35,10 +35,6 @@ namespace Shop
             {
                 CopySelectedBundle();
             }
-            else
-            {
-                Debug.LogError("BundleInfoContext.PrototypeParent not assigned in scene!");
-            }
         }
 
         private void CopySelectedBundle()

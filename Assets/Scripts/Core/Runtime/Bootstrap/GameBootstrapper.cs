@@ -5,7 +5,7 @@ namespace Core.Bootstrap
 {
     //bootstapper itself should be in a separate scene.
     //but for the sake of simplicity, I put it in the main scene -
-    //and just use script execution order to make sure it runs first.
+    //and just used script execution order to make sure it runs first.
     public class GameBootstrapper : MonoBehaviour
     {
         //we can create custom bootstaping logic here.

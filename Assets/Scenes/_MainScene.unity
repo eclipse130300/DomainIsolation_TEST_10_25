@@ -326,6 +326,35 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4abebbdcde71f834083f1d90b66f4c47, type: 3}
+--- !u!1 &321597967 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4666283519423564596, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+  m_PrefabInstance: {fileID: 1223649660212936442}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &321597969 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2366098985702379033, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+  m_PrefabInstance: {fileID: 1223649660212936442}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321597967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &321597971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 321597967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc235cb7cf244fc1ba4de3235f937196, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Gold::Gold.CurrentGoldAmountText
+  text: {fileID: 321597969}
 --- !u!1 &330585543
 GameObject:
   m_ObjectHideFlags: 0
@@ -812,7 +841,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4581471706204333282, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
       propertyPath: m_Name
-      value: StatPrototype (1)
+      value: StatHealth
       objectReference: {fileID: 0}
     - target: {fileID: 7036322142908356133, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
       propertyPath: m_AnchorMax.y
@@ -945,7 +974,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4666283519423564596, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1694812845}
   m_SourcePrefab: {fileID: 100100000, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
 --- !u!224 &751271410 stripped
 RectTransform:
@@ -1001,6 +1033,35 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &843979592 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4666283519423564596, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+  m_PrefabInstance: {fileID: 951353335}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &843979594 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2366098985702379033, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+  m_PrefabInstance: {fileID: 951353335}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843979592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &843979596
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 843979592}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8c7757f1c63a412da57039d9221cadcc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: VIP::VIP.CurrentVipDurationText
+  _text: {fileID: 843979594}
 --- !u!1001 &951353335
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1015,7 +1076,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4581471706204333282, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
       propertyPath: m_Name
-      value: StatPrototype (3)
+      value: StatVip
       objectReference: {fileID: 0}
     - target: {fileID: 7036322142908356133, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1148,7 +1209,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4666283519423564596, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 843979596}
   m_SourcePrefab: {fileID: 100100000, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
 --- !u!224 &951353336 stripped
 RectTransform:
@@ -1165,7 +1229,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4581471706204333282, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
       propertyPath: m_Name
-      value: StatPrototype (2)
+      value: StatLocation
       objectReference: {fileID: 0}
     - target: {fileID: 7036322142908356133, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
       propertyPath: m_AnchorMax.y
@@ -1298,7 +1362,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4666283519423564596, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1652466307}
   m_SourcePrefab: {fileID: 100100000, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
 --- !u!224 &1159484310 stripped
 RectTransform:
@@ -1415,6 +1482,64 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6243973102182218078, guid: 4abebbdcde71f834083f1d90b66f4c47, type: 3}
   m_PrefabInstance: {fileID: 1791488538}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1652466303 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4666283519423564596, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+  m_PrefabInstance: {fileID: 1159484309}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1652466305 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2366098985702379033, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+  m_PrefabInstance: {fileID: 1159484309}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652466303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &1652466307
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652466303}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f8916691e457471087c72bdb673fcc35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Location::Location.CurrentLocationText
+  _text: {fileID: 1652466305}
+--- !u!1 &1694812841 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4666283519423564596, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+  m_PrefabInstance: {fileID: 751271409}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1694812843 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2366098985702379033, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+  m_PrefabInstance: {fileID: 751271409}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694812841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.TextMeshPro::TMPro.TextMeshProUGUI
+--- !u!114 &1694812845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694812841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0e7d22c074404550a9de401bbbc50507, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Health::Health.CurrentHealthAmountText
+  _text: {fileID: 1694812843}
 --- !u!1 &1717905593
 GameObject:
   m_ObjectHideFlags: 0
@@ -2011,7 +2136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4581471706204333282, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
       propertyPath: m_Name
-      value: StatPrototype
+      value: StatGold
       objectReference: {fileID: 0}
     - target: {fileID: 7036322142908356133, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
       propertyPath: m_AnchorMax.y
@@ -2144,7 +2269,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4666283519423564596, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 321597971}
   m_SourcePrefab: {fileID: 100100000, guid: 35e417a9746bb1a47a1f843e1b631a32, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

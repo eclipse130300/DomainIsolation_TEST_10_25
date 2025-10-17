@@ -9,10 +9,10 @@ namespace Shop.Bundles
         public string BundleName;
         
         [SerializeReference] [SelectableImpl] 
-        private IBundleBrick[] price;
+        public IBundleBrick [] price;
         
         [SerializeReference] [SelectableImpl]
-        private IBundleBrick[] rewards;
+        public IBundleBrick [] rewards;
         
         public bool CanBePurchased()
         {

@@ -1,3 +1,5 @@
+using System;
+
 namespace Shop.Bundles
 {
     public interface IBundleBrick
@@ -5,5 +7,7 @@ namespace Shop.Bundles
         public void Apply();
 
         public bool IsAvailable();
+        
+        IObservable<bool> ObserveAvailability();
     }
 }

@@ -712,6 +712,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 501004234}
+  - component: {fileID: 501004235}
   m_Layer: 5
   m_Name: BundlesScreen
   m_TagString: Untagged
@@ -740,6 +741,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &501004235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 501004233}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 655f1edec1d368a4eace35273ba0db9a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Shop::Shop.BundlesScreen
+  _bundlePrototypePrefab: {fileID: 1611307225062729240, guid: 4abebbdcde71f834083f1d90b66f4c47, type: 3}
+  _contentParent: {fileID: 732599199}
 --- !u!224 &638187237 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6243973102182218078, guid: 4abebbdcde71f834083f1d90b66f4c47, type: 3}

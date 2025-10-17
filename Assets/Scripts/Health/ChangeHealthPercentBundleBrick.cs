@@ -1,6 +1,7 @@
 using System;
 using Core;
 using Shop.Bundles;
+using UniRx;
 using UnityEngine;
 
 namespace Health
@@ -25,6 +26,12 @@ namespace Health
         public bool IsAvailable()
         {
             return true;
+        }
+        
+        public IObservable<bool> ObserveAvailability()
+        {
+            // Always available
+            return Observable.Return(true);
         }
     }
 }

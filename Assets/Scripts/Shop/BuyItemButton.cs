@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using Shop.Requests;
+using UniRx;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -10,6 +11,7 @@ namespace Shop
     public class BuyItemButton : MonoBehaviour
     {
         [SerializeField] private Button  buyButton;
+        [SerializeField] private BundlePrototype bundlePrototype;
 
         public UnityEvent onRequestStarted;
         public UnityEvent onRequestFinished;
@@ -18,28 +20,35 @@ namespace Shop
         {
             buyButton.onClick.AddListener(OnClick);
         }
+
+        private void Start()
+        {
+            buyButton.interactable = bundlePrototype._canBePurchased.Value;
+            bundlePrototype._canBePurchased.Subscribe(OnPurchaseAvailabilityChanged).AddTo(this);
+        }
         
+        private void OnPurchaseAvailabilityChanged(bool canBePurchased)
+        {
+            buyButton.interactable = canBePurchased;
+        }
+
         private async void OnClick()
         {
-            onRequestStarted?.Invoke();
-            
-            //actually item id have to be revealed on the scene opening
-            var itemMockId = Guid.NewGuid().ToString();
-            
-            //TODO: make real resource values
-            Dictionary<string, string> resourcesToSpend = new Dictionary<string, string>
+            try
             {
-                { "coins", "100" },
-                { "gems", "10" },
-                { "itemId", itemMockId }
-            };
-
-            var request = new BuyItemRequestMock(resourcesToSpend).SendAsyncMock();
+                onRequestStarted?.Invoke();
+                
+                var request = new BuyItemRequestMock(bundlePrototype.Bundle).SendAsyncMock();
             
-            //todo: use result for error handling (at least log it)
-            var result = await request;
+                //todo: use real result for error handling
+                var result = await request;
             
-            onRequestFinished?.Invoke();
+                onRequestFinished?.Invoke();
+            }
+            catch (Exception e)
+            {
+                Debug.LogError($"Error during BuyItemRequest: {e.Message}");
+            }
         }
     }
 }

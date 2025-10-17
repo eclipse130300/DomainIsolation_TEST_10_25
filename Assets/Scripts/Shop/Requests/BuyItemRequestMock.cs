@@ -1,24 +1,34 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Shop.Bundles;
 
 namespace Shop.Requests
 {
     public class BuyItemRequestMock : BuyItemRequest
     {
+        BundleSO _bundle;
+        
         //we need to check if there are enough resources to spend in the mock request
-        //should be handled by some separate manager on the local machine for now
-        public BuyItemRequestMock(Dictionary<string, string> resourcesToSpend) : base(resourcesToSpend)
+        public BuyItemRequestMock(BundleSO bundleSo) : base(new Dictionary<string, string>())
         {
+            _bundle = bundleSo;
         }
 
         public override async Task<bool> SendAsyncMock()
         {
-            //simulate checking resources on the local machine
-            bool hasEnoughResources = true; // Replace with actual logic to check resources
-
-            await Task.Delay(3000); // Simulate some processing delay
+            await Task.Delay(1000); // Simulate some processing delay
             
-            return hasEnoughResources;
+            foreach(var price in _bundle.price)
+            {
+                price.Apply();
+            }
+            
+            foreach(var price in _bundle.rewards)
+            {
+                price.Apply();
+            }
+            
+            return true;
         }
     }
 }

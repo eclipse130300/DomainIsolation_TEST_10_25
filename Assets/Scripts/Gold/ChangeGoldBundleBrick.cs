@@ -1,6 +1,7 @@
 using System;
 using Core;
 using Shop.Bundles;
+using UniRx;
 using UnityEngine;
 
 namespace Gold
@@ -22,6 +23,16 @@ namespace Gold
         {
             var playerGold = PlayerData.Instance.GetOrCreate<PlayerGold>();
             return playerGold.GoldAmount.Value + _changeAmount >= 0;
+        }
+        
+        public IObservable<bool> ObserveAvailability()
+        {
+            var playerGold = PlayerData.Instance.GetOrCreate<PlayerGold>();
+
+            // React to gold changes
+            return playerGold.GoldAmount
+                .Select(_ => IsAvailable()) // recompute availability
+                .DistinctUntilChanged();    // only when it actually changes
         }
     }
 }

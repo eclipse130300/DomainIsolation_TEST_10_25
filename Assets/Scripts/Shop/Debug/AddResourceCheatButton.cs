@@ -3,7 +3,7 @@ using Shop.Bundles;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Shop.Debug
+namespace Shop
 {
     public class AddResourceCheatButton : MonoBehaviour
     {

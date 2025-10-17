@@ -386,6 +386,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Shop::Shop.BundlePrototype
   _infoButton: {fileID: 4126053436815624908}
+  _bundleNameText: {fileID: 8471106774688598247}
+  _canBePurchased:
+    value: 0
 --- !u!1 &2998561119497571710
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,6 +601,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Shop::Shop.BuyItemButton
   buyButton: {fileID: 4431130861618054786}
+  bundlePrototype: {fileID: 4953433922823945134}
   onRequestStarted:
     m_PersistentCalls:
       m_Calls:
@@ -962,7 +966,7 @@ GameObject:
   - component: {fileID: 5530489615337176493}
   - component: {fileID: 5979872284050723744}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: BundleNameText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

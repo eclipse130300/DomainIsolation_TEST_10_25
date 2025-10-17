@@ -23,8 +23,8 @@ namespace Shop
 
         private void Start()
         {
-            buyButton.interactable = bundlePrototype._canBePurchased.Value;
-            bundlePrototype._canBePurchased.Subscribe(OnPurchaseAvailabilityChanged).AddTo(this);
+            buyButton.interactable = bundlePrototype.CanBePurchased.Value;
+            bundlePrototype.CanBePurchased.Subscribe(OnPurchaseAvailabilityChanged).AddTo(this);
         }
         
         private void OnPurchaseAvailabilityChanged(bool canBePurchased)
@@ -38,11 +38,14 @@ namespace Shop
             {
                 onRequestStarted?.Invoke();
                 
+                buyButton.interactable = false;
                 var request = new BuyItemRequestMock(bundlePrototype.Bundle).SendAsyncMock();
             
                 //todo: use real result for error handling
                 var result = await request;
-            
+                buyButton.interactable = bundlePrototype.CanBePurchased.Value;
+                
+                
                 onRequestFinished?.Invoke();
             }
             catch (Exception e)

@@ -13,7 +13,7 @@ namespace Shop
         [SerializeField] Button _infoButton;
         [SerializeField] private TextMeshProUGUI _bundleNameText;
         
-        public ReactiveProperty<bool> _canBePurchased = new(false);
+        public ReactiveProperty<bool> CanBePurchased = new(false);
         
         private CompositeDisposable _disposables = new();
         private BundleSO _bundle;
@@ -30,7 +30,7 @@ namespace Shop
             Observable.CombineLatest(bundle.price.Select(p => p.ObserveAvailability()))
                 .Select(all => all.All(x => x)) // Check if all bricks are available
                 .DistinctUntilChanged()
-                .Subscribe(v => _canBePurchased.Value = v)
+                .Subscribe(v => CanBePurchased.Value = v)
                 .AddTo(_disposables);
         }
         

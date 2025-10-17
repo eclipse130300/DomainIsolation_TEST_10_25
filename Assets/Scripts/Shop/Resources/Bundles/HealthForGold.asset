@@ -23,7 +23,7 @@ MonoBehaviour:
     - rid: 479085110520971264
       type: {class: ChangeGoldBundleBrick, ns: Gold, asm: Gold}
       data:
-        _changeAmount: -20
+        _changeAmount: -30
     - rid: 479085110520971265
       type: {class: ChangeHealthAmountBundleBrick, ns: Health, asm: Health}
       data:

@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6e609b71e6e477a88e750be0b49708d, type: 3}
   m_Name: HealthForGold
   m_EditorClassIdentifier: Shop::Shop.Bundles.BundleSO
-  BundleName: "\u0417\u0434\u043E\u0440\u043E\u0432\u044C\u0435 \u0437\u0430 \u0437\u043E\u043B\u043E\u0442\u043E"
+  BundleName: "10 \u0417\u0434\u043E\u0440\u043E\u0432\u044C\u0435 \u0437\u0430 30
+    \u0437\u043E\u043B\u043E\u0442\u043E"
   price:
   - rid: 479085110520971264
   rewards:

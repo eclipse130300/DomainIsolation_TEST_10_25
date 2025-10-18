@@ -30,7 +30,7 @@ namespace Shop
                 
                 var bundleGO = Instantiate(_bundlePrototypePrefab, _contentParent);
                 var bundlePrototype = bundleGO.GetComponent<BundlePrototype>();
-                bundlePrototype.Setup(bundle);
+                bundlePrototype.Setup(bundle, withInfoButton: true);
             }
         }
     }

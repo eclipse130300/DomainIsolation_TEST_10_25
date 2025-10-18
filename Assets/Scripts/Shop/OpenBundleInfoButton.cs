@@ -41,7 +41,7 @@ namespace Shop
         {
             var newPrototype = Instantiate(prototype.gameObject, BundleInfoContext.PrototypeParent, false);
             var newBundlePrototype = newPrototype.GetComponent<BundlePrototype>();
-            newBundlePrototype.SetupBundlePrototypePreviewMode();
+            newBundlePrototype.Setup(prototype.Bundle, withInfoButton: false);
         }
     }
 }

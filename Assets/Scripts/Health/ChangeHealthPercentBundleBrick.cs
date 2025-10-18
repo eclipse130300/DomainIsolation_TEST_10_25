@@ -9,7 +9,8 @@ namespace Health
     [Serializable]
     public class ChangeHealthPercentBundleBrick : IBundleBrick
     {
-        [Range(0f, 100f)]
+        [Range(-100f, 100f)]
+        [SerializeField]
         private float _changeHealthPercent = 10f;
         
         public void Apply()

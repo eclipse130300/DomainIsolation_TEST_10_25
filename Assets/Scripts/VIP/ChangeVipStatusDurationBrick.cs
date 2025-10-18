@@ -24,13 +24,19 @@ namespace VIP
         
         public bool IsAvailable()
         {
-            return true;
+            //ensure we have more than -_changeVipDurationSeconds
+            var playerVipStatus = Core.PlayerData.Instance.GetOrCreate<PlayerVIP>();
+            return playerVipStatus.VipTime.Value.TotalSeconds + _changeVipDurationSeconds >= 0;
         }
         
         public IObservable<bool> ObserveAvailability()
         {
-            // Always available
-            return Observable.Return(true);
+            var playerVipStatus = Core.PlayerData.Instance.GetOrCreate<PlayerVIP>();
+
+            // React to VIP time changes
+            return playerVipStatus.VipTime
+                .Select(_ => IsAvailable()) // recompute availability
+                .DistinctUntilChanged();    // only when it actually changes
         }
     }
 }

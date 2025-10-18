@@ -1,11 +1,10 @@
 using Unity.Plastic.Newtonsoft.Json;
+using System;
+using System.Threading.Tasks;
+using System.Collections.Generic;
 
 namespace Core
 {
-    using System;
-    using System.Threading.Tasks;
-    using System.Collections.Generic;
-
     public abstract class HttpRequestBase<TResponse>
     {
         /// <summary>Request URL (relative or absolute).</summary>

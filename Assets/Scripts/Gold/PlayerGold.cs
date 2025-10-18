@@ -1,14 +1,36 @@
+using System;
 using UniRx;
 
 namespace Gold
 {
-    public struct PlayerGold
+    public class PlayerGold : IDisposable
     {
-        public ReactiveProperty<int> GoldAmount;
+        private readonly ReactiveProperty<int> _gold;
+        public IReadOnlyReactiveProperty<int> Gold => _gold;
 
-        public PlayerGold(int goldAmount)
+        public PlayerGold()
         {
-            GoldAmount = new ReactiveProperty<int>(goldAmount);
+            _gold = new ReactiveProperty<int>(0);
+        }
+
+        public PlayerGold(int initialAmount)
+        {
+            _gold = new ReactiveProperty<int>(initialAmount);
+        }
+
+        public void Add(int amount)
+        {
+            _gold.Value += amount;
+        }
+
+        public void Set(int amount)
+        {
+            _gold.Value = amount;
+        }
+
+        public void Dispose()
+        {
+            _gold.Dispose();
         }
     }
 }

@@ -14,7 +14,7 @@ namespace Gold
         private void Awake()
         {
             var gold = PlayerData.Instance.GetOrCreate<PlayerGold>();
-            gold.GoldAmount.Subscribe(UpdateText).AddTo(this);
+            gold.Gold.Subscribe(UpdateText).AddTo(this);
         }
 
         private void UpdateText(int amount)

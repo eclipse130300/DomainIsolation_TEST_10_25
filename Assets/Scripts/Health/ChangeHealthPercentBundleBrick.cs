@@ -19,7 +19,7 @@ namespace Health
             int healthChangeAmount = Mathf.RoundToInt(playerHealth.Health.Value * (_changeHealthPercent / 100f));
             
             //actually we could use extension of kind ClampedReactiveProperty in data container, but let's keep it simple
-            playerHealth.Health.Value = Mathf.Max(0, playerHealth.Health.Value + healthChangeAmount);
+            playerHealth.Set(Mathf.Max(0, playerHealth.Health.Value + healthChangeAmount));
             
             Debug.Log($"{nameof(ChangeHealthPercentBundleBrick)}: Changed player health by {_changeHealthPercent}%. New health: {playerHealth.Health.Value}");
         }

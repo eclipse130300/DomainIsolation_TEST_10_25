@@ -14,7 +14,7 @@ namespace Health
         public void Apply()
         {
             var playerHealth = PlayerData.Instance.GetOrCreate<PlayerHealth>();
-            playerHealth.Health.Value += _changeHealthAmount;
+            playerHealth.Add(_changeHealthAmount);
             Debug.Log($"{nameof(ChangeHealthAmountBundleBrick)}: Changed player health by {_changeHealthAmount}. New health: {playerHealth.Health.Value}");
         }
 

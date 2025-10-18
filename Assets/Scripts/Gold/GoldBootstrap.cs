@@ -14,7 +14,7 @@ namespace Gold
             PlayerGold playerGold = new PlayerGold(100);
             PlayerData.Instance.Set(playerGold);
             
-            Debug.Log($"{nameof(GoldBootstrap)}: Initializing player gold with {playerGold.GoldAmount.Value}.");
+            Debug.Log($"{nameof(GoldBootstrap)}: Initializing player gold with {playerGold.Gold.Value}.");
         }
     }
 }

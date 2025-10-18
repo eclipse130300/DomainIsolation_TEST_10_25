@@ -12,11 +12,11 @@ namespace VIP
         public void Apply()
         {
             var playerVipStatus = Core.PlayerData.Instance.GetOrCreate<PlayerVIP>();
-            playerVipStatus.VipTime.Value += TimeSpan.FromSeconds(_changeVipDurationSeconds);
+            playerVipStatus.Add(TimeSpan.FromSeconds(_changeVipDurationSeconds));
             //clamp to non-negative
             if (playerVipStatus.VipTime.Value < TimeSpan.Zero)
             {
-                playerVipStatus.VipTime.Value = TimeSpan.Zero;
+                playerVipStatus.Set(TimeSpan.Zero);
             }
             
             Debug.Log($"{nameof(ChangeVipStatusDurationBrick)}: Changed VIP status duration by {_changeVipDurationSeconds} seconds. New duration: {playerVipStatus.VipTime.Value}");

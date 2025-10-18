@@ -14,7 +14,7 @@ namespace Location
         public void Apply()
         {
             var playerLocation = PlayerData.Instance.GetOrCreate<PlayerLocation>();
-            playerLocation.Location.Value = _newLocationName;
+            playerLocation.Set(_newLocationName);
             
             Debug.Log($"{nameof(ChangeLocationBundleBrick)}: Changed player location to {_newLocationName}");
         }

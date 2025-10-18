@@ -15,14 +15,14 @@ namespace Gold
         {
             var playerGold = PlayerData.Instance.GetOrCreate<PlayerGold>();
             
-            playerGold.GoldAmount.Value += _changeAmount;
-            Debug.Log($"{nameof(ChangeGoldBundleBrick)}: Changed player gold by {_changeAmount}. New amount: {playerGold.GoldAmount.Value}");
+            playerGold.Add(_changeAmount);
+            Debug.Log($"{nameof(ChangeGoldBundleBrick)}: Changed player gold by {_changeAmount}. New amount: {playerGold.Gold.Value}");
         }
 
         public bool IsAvailable()
         {
             var playerGold = PlayerData.Instance.GetOrCreate<PlayerGold>();
-            return playerGold.GoldAmount.Value + _changeAmount >= 0;
+            return playerGold.Gold.Value + _changeAmount >= 0;
         }
         
         public IObservable<bool> ObserveAvailability()
@@ -30,7 +30,7 @@ namespace Gold
             var playerGold = PlayerData.Instance.GetOrCreate<PlayerGold>();
 
             // React to gold changes
-            return playerGold.GoldAmount
+            return playerGold.Gold
                 .Select(_ => IsAvailable()) // recompute availability
                 .DistinctUntilChanged();    // only when it actually changes
         }

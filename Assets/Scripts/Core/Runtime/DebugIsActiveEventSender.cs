@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Core.Runtime
+namespace Core
 {
     public class DebugIsActiveEventSender : MonoBehaviour
     {

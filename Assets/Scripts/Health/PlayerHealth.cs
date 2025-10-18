@@ -1,14 +1,36 @@
+using System;
 using UniRx;
 
 namespace Health
 {
-    public struct PlayerHealth
+    public class PlayerHealth : IDisposable
     {
-        public ReactiveProperty<int> Health;
+        private readonly ReactiveProperty<int> _health;
+        public IReadOnlyReactiveProperty<int> Health => _health;
 
-        public PlayerHealth(int health)
+        public PlayerHealth()
         {
-            Health = new ReactiveProperty<int>(health);
+            _health = new ReactiveProperty<int>(100);
+        }
+
+        public PlayerHealth(int initialHealth = 100)
+        {
+            _health = new ReactiveProperty<int>(initialHealth);
+        }
+        
+        public void Add(int amount)
+        {
+            _health.Value += amount;
+        }
+
+        public void Set(int amount)
+        {
+            _health.Value = amount;
+        }
+
+        public void Dispose()
+        {
+            _health.Dispose();
         }
     }
 }

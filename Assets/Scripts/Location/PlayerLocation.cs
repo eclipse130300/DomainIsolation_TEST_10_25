@@ -1,13 +1,31 @@
+using System;
 using UniRx;
 
 namespace Location
 {
-    public struct PlayerLocation
+    public class PlayerLocation : IDisposable
     {
-        public ReactiveProperty<string> Location;
-        public PlayerLocation(string location)
+        private readonly ReactiveProperty<string> _location;
+        public IReadOnlyReactiveProperty<string> Location => _location;
+
+        public PlayerLocation()
         {
-            Location = new ReactiveProperty<string>(location);
+            _location = new ReactiveProperty<string>(string.Empty);
+        }
+
+        public PlayerLocation(string initialLocation)
+        {
+            _location = new ReactiveProperty<string>(initialLocation);
+        }
+
+        public void Set(string location)
+        {
+            _location.Value = location;
+        }
+
+        public void Dispose()
+        {
+            _location.Dispose();
         }
     }
 }

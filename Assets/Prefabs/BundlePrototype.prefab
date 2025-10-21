@@ -600,62 +600,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6760bf8044564507b18e36e7cc4189dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Shop::Shop.BuyItemButton
-  buyButton: {fileID: 4431130861618054786}
-  bundlePrototype: {fileID: 4953433922823945134}
-  onRequestStarted:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2998561119497571710}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
-      - m_Target: {fileID: 4126053436815624908}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
-        m_MethodName: set_interactable
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-  onRequestFinished:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 2998561119497571710}
-        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-        m_MethodName: SetActive
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 4126053436815624908}
-        m_TargetAssemblyTypeName: UnityEngine.UI.Button, UnityEngine.UI
-        m_MethodName: set_interactable
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 1
-        m_CallState: 2
+  _buyButton: {fileID: 4431130861618054786}
+  _bundlePrototype: {fileID: 4953433922823945134}
+  _processingGameobject: {fileID: 2998561119497571710}
 --- !u!1 &6960062395318532862
 GameObject:
   m_ObjectHideFlags: 0
